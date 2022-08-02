@@ -4,33 +4,25 @@ import Container from './Container/Container';
 import NavBar from './components/NavBar';
 import Header from './components/Header/ItemListContainer';
 import CartWidget from './components/CartWidget';
+import Contador from './components/ItemCount'
+import { useEffect } from 'react';
 
 
 
 
 function App() {
+
+  useEffect(() => {
+    console.log('App mounted');
+  },[Contador]);
   return <>
     <NavBar />
     <h2>Titulo</h2>
     <Container />
-    <CartWidget />
+    <Contador></Contador>
     
   </>
 }
 
 export default App;
 
-
-// function App() {
-
-//     return (
-//       <div className="App">
-//         <Header titulo="TITULO" />
-//         <Form></Form>
-//       </div>
-
-      
-//     );
-// }
-
-// export default App;
